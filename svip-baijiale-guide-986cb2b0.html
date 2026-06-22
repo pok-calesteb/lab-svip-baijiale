@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南：百家乐入门与提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fbfaf9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2c2b2a;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* 主视觉区 */
+    .hero {
+      margin-bottom: 3.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e8e4e0;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1f1e1c;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #5e5b58;
+      max-width: 600px;
+    }
+
+    /* 信息卡片通用 */
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.03);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: #2a2826;
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2::before {
+      content: "◆";
+      font-size: 0.85rem;
+      color: #b8a99e;
+      margin-right: 0.15rem;
+    }
+
+    .card p, .card li {
+      font-size: 0.98rem;
+      color: #4a4845;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      padding: 0.2rem 0;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .card li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #bcb1a7;
+    }
+
+    .highlight-link {
+      color: #6d5e52;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #d5ccc4;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .highlight-link:hover {
+      color: #1f1e1c;
+      text-decoration-color: #1f1e1c;
+    }
+
+    /* 适合人群 + 自然链接段落 合并在一个卡片区内 */
+    .combined-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .inset-text {
+      background: #f6f3f0;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+    }
+
+    .inset-text p {
+      margin-bottom: 0.8rem;
+    }
+
+    .inset-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      margin-bottom: 3.5rem;
+      border-top: 1px solid #e8e4e0;
+      padding-top: 2rem;
+    }
+
+    .faq-mini h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #2a2826;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item .q {
+      font-weight: 450;
+      color: #2c2b2a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item .a {
+      color: #5e5b58;
+      font-size: 0.95rem;
+    }
+
+    /* 温柔提示 */
+    .reminder {
+      background: #f3f0ec;
+      border-radius: 18px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: #4f4c48;
+    }
+
+    .reminder strong {
+      color: #2c2b2a;
+      font-weight: 500;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #8d8680;
+      text-align: center;
+      border-top: 1px solid #e8e4e0;
+      padding-top: 1.8rem;
+      margin-top: 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body { padding: 1.2rem 0.8rem; }
+      .hero h1 { font-size: 1.7rem; }
+      .card, .inset-text, .reminder { padding: 1.3rem 1.2rem; }
+      .card h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 主视觉 -->
+  <div class="hero">
+    <h1>百家乐 · 简明指南</h1>
+    <p>从规则到心态，一份温和的阅读笔记。适合刚接触或希望重新梳理玩法的朋友。</p>
+  </div>
+
+  <!-- 用途卡片 + 特点卡片 -->
+  <div class="cards-grid">
+    <div class="card">
+      <h2>用途与场景</h2>
+      <p><strong>百家乐</strong>是一种常见的纸牌比较游戏，在休闲娱乐场所中往往占据核心位置。它规则简单：庄家与闲家各发牌，比较点数接近9的一方获胜。许多人将其视为一种节奏平缓、易于上手的类别。</p>
+      <p>常见的场景包括：朋友聚会时的轻松一局、线上平台的短时体验、以及作为了解博弈文化的切入点。不论哪种情形，保持平常心都是第一原则。</p>
+    </div>
+
+    <div class="card">
+      <h2>特点与节奏</h2>
+      <ul>
+        <li>每局独立，不依赖历史结果，也没有“必赢”策略。</li>
+        <li>庄、闲、和三门，赔率各有不同，其中和局出现几率较低。</li>
+        <li>通常节奏较快，适合短时间参与，不宜长时间沉浸。</li>
+        <li>多数平台提供“免佣”或“低佣”选项，规则略有差异，需提前确认。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 适合人群 + 自然链接段落（组合） -->
+  <div class="combined-section">
+    <div class="card">
+      <h2>适合人群</h2>
+      <ul>
+        <li>对纸牌游戏感兴趣、愿意了解基础规则的学习者。</li>
+        <li>希望尝试一种低门槛、不依赖复杂技巧的娱乐方式。</li>
+        <li>更看重氛围与短暂放松，而非输赢结果的玩家。</li>
+        <li>能够为自己设定时间与金额边界，保持理性的人。</li>
+      </ul>
+    </div>
+
+    <div class="inset-text">
+      <p>如果你希望进一步查看规则详解、术语说明或不同平台的差异，可以前往 <a href="https://svip-baijiale.com" class="highlight-link">百家乐</a> 了解更多。那里提供了一些基础信息与常见疑问的整理，适合作为查阅参考。</p>
+      <p>需要强调的是，无论在哪里参与，提前了解规则、设置预算上限、不追逐损失，才是长久之道。</p>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <h3>常见疑问摘要</h3>
+    <div class="faq-item">
+      <div class="q">Q：百家乐有“规律”或“路单”吗？</div>
+      <div class="a">A：每一局都是独立事件，所谓的“路单”只是历史记录，不预示未来。可以参考，但不宜作为决策依据。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q：新手应该选庄还是闲？</div>
+      <div class="a">A：从概率看，庄家略占优势（约45.8%），但需支付5%佣金。闲家胜率约44.6%。两者差异很小，选择你感觉舒适的一边即可。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q：和局的赔率很高，值得追吗？</div>
+      <div class="a">A：和局出现概率约9.5%，赔率通常为1:8或1:9。长期看，押和局的期望值为负，建议作为偶尔的小注尝试。</div>
+    </div>
+  </div>
+
+  <!-- 访问提醒（温和提醒） -->
+  <div class="reminder">
+    <strong>访问提醒</strong><br>
+    本文仅作信息整理，不构成任何参与建议。如果你选择了解或尝试 <strong>百家乐</strong>，请提前熟悉所在地区的相关规定，并始终将娱乐视为目的，而非获利手段。合理设定时间与预算，保持轻松心态。
+  </div>
+
+  <div class="footer-note">
+    — 简明指南 · 理性参与 —
+  </div>
+
+</div>
+</body>
+</html>
